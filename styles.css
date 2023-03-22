@@ -1,0 +1,67 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  font-size: 18px;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-image: url("https://t4.ftcdn.net/jpg/03/33/16/21/360_F_333162138_4i2Ce8farqO0dlbyi6kqrjuVBbkrk7Qf.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #ffff;
+  font-weight: bold;
+}
+
+.title {
+  color: rgb(204, 204, 7);
+  margin: 3rem;
+}
+
+p {
+  margin: 1rem;
+}
+button {
+  color: rgb(28, 112, 28);
+  background-color: rgb(204, 204, 7);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
