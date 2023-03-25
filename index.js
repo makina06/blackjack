@@ -1,19 +1,28 @@
-let firstCard = 11;
-let secondCard = 3;
-let newCard = 5;
-let cards = [firstCard, secondCard, newCard];
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
+let newCard = getRandomCard();
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let cardEl = document.getElementById("card-el");
 let sumEl = document.getElementById("sum-el");
 let playEl = document.getElementById("play-el");
 let message = "";
 
+function getRandomCard() {
+  let randomCard = Math.floor(Math.random() * 11 + 1);
+  return randomCard;
+}
+getRandomCard();
 function startGame() {
   renderGame();
 }
 
 function renderGame() {
-  cardEl.textContent = "Card: " + cards[0] + " " + cards[1];
+  cardEl.textContent = "Card: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardEl.textContent += cards[i] + " ";
+  }
+
   sumEl.textContent = "Sum: " + sum;
   if (sum < 21) {
     message = " You can pick another card";
@@ -24,7 +33,8 @@ function renderGame() {
   playEl.textContent = message;
 }
 
-function newCards() {
+function getNewCard() {
   sum += newCard;
+  cards.push(newCard);
   renderGame();
 }
